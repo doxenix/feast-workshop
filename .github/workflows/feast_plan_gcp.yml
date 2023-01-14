@@ -6,6 +6,10 @@ jobs:
   feast_plan:
     runs-on: ubuntu-latest
     steps:
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
       - name: Setup Python
         id: setup-python
         uses: actions/setup-python@v2
@@ -13,13 +17,10 @@ jobs:
           python-version: "3.7"
           architecture: x64
       - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0
-        with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
-          export_default_credentials: true
+        uses: 'google-github-actions/setup-gcloud@v1'
+
       - name: Use gcloud CLI
-        run: gcloud info; echo "hi"; cat $GOOGLE_APPLICATION_CREDENTIALS
+        run: gcloud info
 
       # Run `feast plan`
       - uses: actions/checkout@v2
@@ -30,7 +31,7 @@ jobs:
         env:
           FEAST_USAGE: "False"
           FEAST_FORCE_USAGE_UUID: None
-          IS_TEST: "True"          
+          IS_TEST: "True"
         run: |
           body=$(cd module_0/feature_repo_gcp; feast plan)
           body="${body//'%'/'%25'}"
