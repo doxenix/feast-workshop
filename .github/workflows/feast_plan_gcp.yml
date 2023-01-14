@@ -5,8 +5,6 @@ on: [pull_request]
 jobs:
   feast_plan:
     runs-on: ubuntu-latest
-    env:
-      GOOGLE_APPLICATION_CREDENTIALS: "feast-workshop-374712-4ab51cb72851.json"
     steps:
       - name: Setup Python
         id: setup-python
