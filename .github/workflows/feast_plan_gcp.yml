@@ -6,7 +6,7 @@ jobs:
   feast_plan:
     runs-on: ubuntu-latest
     env:
-      FEAST_VERSION: "0.21.2"
+      GOOGLE_APPLICATION_CREDENTIALS: "feast-workshop-374712-4ab51cb72851.json"
     steps:
       - name: Setup Python
         id: setup-python
