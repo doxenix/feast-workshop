@@ -5,14 +5,12 @@ on: [pull_request]
 jobs:
   feast_plan:
     runs-on: ubuntu-latest
-    env:
-      FEAST_VERSION: "0.11.0"
     steps:
       - name: Setup Python
         id: setup-python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.7"
+          python-version: "3.8"
           architecture: x64
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0
@@ -26,7 +24,7 @@ jobs:
       # Run `feast plan`
       - uses: actions/checkout@v2
       - name: Install feast
-        run: pip install "feast[gcp]"==$FEAST_VERSION
+        run: pip install "feast[gcp]"
       - name: Capture `feast plan` in a variable
         id: feast_plan
         env:
