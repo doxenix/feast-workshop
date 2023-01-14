@@ -39,3 +39,4 @@ driver_hourly_stats_view_v2 = FeatureView(
     tags={"production": "True"},
     owner="test2@gmail.com",
 )
+
