@@ -9,6 +9,11 @@ jobs:
   feast_apply:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
       - name: Setup Python
         id: setup-python
         uses: actions/setup-python@v2
@@ -16,22 +21,19 @@ jobs:
           python-version: "3.7"
           architecture: x64
       - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0
-        with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
-          export_default_credentials: true
+        uses: 'google-github-actions/setup-gcloud@v1'
+
       - name: Use gcloud CLI
         run: gcloud info
 
       # Run `feast apply`
       - uses: actions/checkout@v2
       - name: Install feast
-        run: pip install "feast[aws]"
+        run: pip install "feast[gcp]"
       - name: Run feast apply
         env:
           FEAST_USAGE: "False"
           IS_TEST: "True"
         run: |
-          cd module_0/feature_repo_aws
+          cd module_0/feature_repo_gcp
           feast apply

@@ -6,6 +6,11 @@ jobs:
   feast_plan:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
       - name: Setup Python
         id: setup-python
         uses: actions/setup-python@v2
@@ -13,18 +18,15 @@ jobs:
           python-version: "3.7"
           architecture: x64
       - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0
-        with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
-          export_default_credentials: true
+        uses: 'google-github-actions/setup-gcloud@v1'
+
       - name: Use gcloud CLI
         run: gcloud info
 
       # Run `feast plan`
-      - uses: actions/checkout@v2
+      # - uses: actions/checkout@v2
       - name: Install feast
-        run: pip install "feast[aws]"
+        run: pip install "feast[gcp]"
       - name: Capture `feast plan` in a variable
         id: feast_plan
         env:
@@ -39,10 +41,10 @@ jobs:
           echo "::set-output name=body::$body"
 
       # Post a comment on the PR with the results of `feast plan`
-      - name: Create comment
-        uses: peter-evans/create-or-update-comment@v1
-        if: ${{ steps.feast_plan.outputs.body }}
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            ${{ steps.feast_plan.outputs.body }}
+      # - name: Create comment
+      #   uses: peter-evans/create-or-update-comment@v2
+      #   if: ${{ steps.feast_plan.outputs.body }}
+      #   with:
+      #     issue-number: ${{ github.event.pull_request.number }}
+      #     body: |
+      #       ${{ steps.feast_plan.outputs.body }}
