@@ -27,11 +27,11 @@ jobs:
       # Run `feast apply`
       - uses: actions/checkout@v2
       - name: Install feast
-        run: pip install "feast[aws]"
+        run: pip install "feast[gcp]"
       - name: Run feast apply
         env:
           FEAST_USAGE: "False"
           IS_TEST: "True"
         run: |
-          cd module_0/feature_repo_aws
+          cd module_0/feature_repo_gcp
           feast apply
