@@ -26,7 +26,7 @@ jobs:
       # Run `feast plan`
       - uses: actions/checkout@v2
       - name: Install feast
-        run: pip install "feast[gcp]"==$FEAST_VERSION
+        run: pip install "feast[gcp]"
       - name: Capture `feast plan` in a variable
         id: feast_plan
         env:
