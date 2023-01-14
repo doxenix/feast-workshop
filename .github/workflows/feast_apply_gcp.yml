@@ -25,9 +25,7 @@ jobs:
 
       - name: Use gcloud CLI
         run: gcloud info
-
-      # Run `feast apply`
-      - uses: actions/checkout@v2
+              
       - name: Install feast
         run: pip install "feast[gcp]"
       - name: Run feast apply
