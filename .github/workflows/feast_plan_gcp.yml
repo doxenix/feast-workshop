@@ -21,7 +21,7 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
       - name: Use gcloud CLI
-        run: gcloud info; ls /home/runner/work/feast-workshop/feast-workshop
+        run: gcloud info; echo "hi"; ls /home/runner/work/feast-workshop/feast-workshop
 
       # Run `feast plan`
       - uses: actions/checkout@v2
