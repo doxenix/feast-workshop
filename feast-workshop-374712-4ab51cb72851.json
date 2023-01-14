@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "feast-workshop-374712",
+  "private_key_id": "4ab51cb72851ab0395dd9fb710b53ee986688f08",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCpgSGMDzGDE1oM\nEITZbMBJQBad51L2fDalOjdiFn8rtZTLt2RpmwhyKyflBMCdI3vG73eo2pZ2p2s+\nn9Ryi9DRzIIuKf72khh2O8Ox+i2eWJFch4iOcH9vCiFc1vkp6/v33f2BEB3b0dyd\nD4m+1ip37B/VpA24U967r7pV7SzzFDCtuVlFNguu3bHD4usqveT1XlUoexXYDoHE\nz/jK6mpV2cU3M1b1ZPiBWQV6keIE1cXLxlNdohWbhRSbL5SW1zjSV6mWmeZPSnUD\no3XHZVnRIlSz2sUWeZZ4ZyW2ypCRcHMS4XkXaWIR5GQeVCaKfuFVkKS4VgT4g+fi\ncL5/s7RVAgMBAAECggEABjrGHKg/5DBYe98Gv7LpsjqvwIF/unbzaMkl8rq4iJO1\npaY80E2WI62gW4aVyaPdnBpK8u+HRIV/2uvzpxR3MG65GuQIoc+mvhmq/7+3eeO8\nm+j2eAp8Z6+4oCyqbAPNqkNqjYBZIi4PuWbLyjHqAUEYizjqfcUsIQiJUZ66d/uz\niL0Mk4EZyxukwTn78AlUuPcyoo/PS2BjsHtwYWclcI8J8D3JDFvkbJWvTJt8zbzw\nJBtc3eWWkBzvcrFpSPhDm1fotUrJyifvyg7PYRVaDb2QmRdbdiSGuZ6GET8KLoVH\n7Mj5NIfikWNYAtReW3dTPuYt5p5JW1fzuKsTR7bfYQKBgQDtfwqK149kbkh21eU9\nIxVrOUO4/nDhGW5sx6+E62yY/baa5h11IFxkA9ojUHp+B88hAXl3ZnJPSqERvLOS\n/E7UNv8baKJxyzW7PUJOA893FvQWrZuex6tzGeoNHIodY93xMRTLk2ESF63mlFti\nOwvMG4RkmkNyp/9ZgO4PD+gfGQKBgQC2tfcW++VPHoD3J4TxZEStcXUPJgR7XMUK\niz0O4DNkU48I+hv5Mx/AjFJRzBf2nhkAYfATFD1EQQBJkUA2UsuW4RQPMGwVoUDs\n1c/xl0AZMxbjH3DwXid5jSoJAMN/Ue/HaD2YzNmUJC8SXPj1pQA39VeQiJfxDfM2\nzJq7jevynQKBgQDmdW/aeQCJOUcSIc9YOzIuoRvpaOZKWG5CGqdkeTshXpmSyBfv\nr15YIzDLMe4bXCKPaanfxkbIUKfp2U38JN+tqEx24Vs4xzM1pWUw5Rut+VUUqJSp\nSCJEB/KJlJclm+IjiTgfr7zzXI0AghgHQzrYbh9TrColGYZ86NKZRRs/CQKBgDGC\np507zwyciHfw5o5/DDkvuHfNZoODRQWxa28/g82Y8vaMx83Ec8M6gwgVVR0IBGBd\nKbAR2PRI5OoKiSrvTqno/gWLqo5F7xD+c2XVBZKOjJIpL/KCoRHIFe7wnQlAS8hu\nT9q7D+6by4GfXfs6pg+D1SGeUgYJMLHVycwvDhPlAoGBAKxhNWuZV9iOFdZRPPEu\nxELNegSrZogN0N001MriiC1EV8/NmpAbSA13zUFDQKHgBBTCUwRIpp2W1ALDqRAm\nq/rC2IjZvhq57Iy/Q09dm36Xt5DrkIh3or5wzZY3Gku8gVFcIAewkeeQjrfqNXnC\nUGwM3o8fAoGMhU+iNZOR4boN\n-----END PRIVATE KEY-----\n",
+  "client_email": "feast-workshop-sa@feast-workshop-374712.iam.gserviceaccount.com",
+  "client_id": "118251317338454259215",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/feast-workshop-sa%40feast-workshop-374712.iam.gserviceaccount.com"
+}
